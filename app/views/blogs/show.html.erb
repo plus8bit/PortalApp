@@ -2,5 +2,6 @@
 <h2><%= @blog.title %></h2>
 <p><%= @blog.content %></p>
 
-<%= link_to "Go Back", blogs_path %>
-
+<%= link_to "Go Back", blogs_path %> |
+<%= link_to "Go Edit", edit_blog_path %> |
+<%= link_to "Delete Post", blog_path, method: :delete, data: {confirm: "Are you sure?"} %>
