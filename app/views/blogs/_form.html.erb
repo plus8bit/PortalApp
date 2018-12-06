@@ -1,0 +1,6 @@
+
+<%= form_with scope: :blog, url: blogs_path, local: true do |post| %>
+  <%= post.text_field :title %><br>
+  <%= post.text_area :content %><br>
+  <%= post.button :submit %>
+<% end %>
