@@ -1,5 +1,23 @@
-<% @blogs.each do |post| %>
-  <h2><%= link_to post.title,  blog_path(post) %> </h2>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @blogs.each do |post| %>
+      <div class="col-sm-4" id="card-margin">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= post.title %>
+            </h5>
+            <p class="card-text">
+              <%= post.content %>
+            </p>
+              <%= link_to "View", blog_path(post), class: "btn btn-outline-info"%>
+              <%= link_to "Edit", edit_blog_path(post), class: "btn btn-outline-success" %>
+              <%= link_to "Delete", blog_path(post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
 
 
