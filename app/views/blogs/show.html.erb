@@ -1,5 +1,8 @@
+<div id="show_page">
+  <h2><%= @blog.title %></h2>
+  <hr>
+  <p><%= @blog.content %></p>
 
-<h2><%= @blog.title %></h2>
-<p><%= @blog.content %></p>
+  <%= link_to "Go Back", blogs_path, class: "btn btn-outline-info", id: "show_button" %>
+</div>
 
-<%= link_to "Go Back", blogs_path, class: "btn btn-outline-info" %>

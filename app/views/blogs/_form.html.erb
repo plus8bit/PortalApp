@@ -1,5 +1,8 @@
-<%= simple_form_for @blog do |f| %>
-  <%= f.input :title, label: "Post Title" %><br>
-  <%= f.input :content %><br>
-  <%= f.button :submit, class: "btn btn-success" %>
-<% end %>
+<div id="render_page">
+  <%= simple_form_for @blog do |f| %>
+    <%= f.input :title, label: "Post Title" %><br>
+    <%= f.input :content %><br>
+    <%= f.button :submit, value: "#{f.object.new_record? ? 'Create' : 'Update'}", class: "btn btn-success" %>
+    <%= link_to "Cancel", root_path, class: "btn btn-outline-danger" %>
+  <% end %>
+</div>
